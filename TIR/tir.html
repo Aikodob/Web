@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>shooting game</title>
+		<meta charset="utf-8">
+		<title>target shooting</title>
+		<style>
+		header{
+		  background-color: #99ffbb;
+		  height: 100px;
+		  text-align: center;
+		}
+		h1{
+		  padding-top: 20px;
+		}
+		footer{
+		  background-color: #99ffbb;
+		  text-align: center;
+		}
+		nav{
+		  background-color: #aaaa55;
+		}
+		img{
+		  height:200px;
+		}
+		#result{
+		  font-size: 15px;
+		}
+		p{
+		  font-size: 25px;
+		  color: green;
+		  font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+		<header><h1>target shooting<h1></header>
+			<article>
+				<p id ="result"></p>
+				<img src="images/1.png"><img src="images/isari.png">
+				<script>
+					var pictures = [
+						"1.png",
+						"2.png",
+						"3.png",
+						"4.png",
+						"5.png",
+						"6.png",
+						"7.png",
+						"8.png"
+					]
+					let i = 0
+					function spin(){
+						i++
+						if(i>8)
+							i=0
+						else
+							document.images[0].src = "images/" + i + ".png"
+					}
+					function start(){
+						i=0
+						document.getElementById("result").innerHTML = "გააჩერე დროულად!"
+						tread = setInterval(spin,10)
+					}
+					function stop(){
+					clearInterval(tread)
+					if(i == 2){
+						document.getElementById("result").style.color = "green"
+						document.getElementById("result").innerHTML = "საღოოლ"
+					}
+					else{
+						document.getElementById("result").style.color = "red"
+						document.getElementById("result").innerHTML = "ანლაქეე"
+					}
+				}
+				</script>
+				<br><br>
+				<button onclick="start()">start</button>
+				<button onclick="stop()">stop</button>
+			</article>
+			<footer>ყველა უფლება დაცულია &copy 2023</footer>
+	</body>
+</html>

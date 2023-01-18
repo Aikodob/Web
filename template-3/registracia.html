@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>მოსახლეობის წიგნების რეგისტრაცია(რეგისტრაცია)</title>
+		<style>
+		header{
+		  background-color: #99ffbb;
+		  height: 100px;
+		  text-align: center;
+		}
+		h1{
+		  padding-top: 20px;
+		}
+		footer{
+		  background-color: #99ffbb;
+		}
+		nav{
+		  background-color: #aaaa55;
+		}
+		div.Main{
+		  border: 1px solid green;
+		  margin: 5px;
+		  width: 200px;
+		}
+		div.TR{
+		  margin: 10px;
+		}
+		</style>
+	</head>
+
+	<body>
+	  <header><h1>რეგისტრაცია</h1></header>
+	  <nav>
+	     <a href="index.html">მთავარი</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	     <a href="aboutUs.html">ჩვენს შესახებ</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	     <a href="sacavi.html">საცავი</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	     <a href="registracia.html">რეგისტრაცია</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	  </nav>
+	  <section>
+	    <article>
+		    <form action="save.php" method="post">
+		    <div class="Main">
+		      <div class="TR"><input type="text" name="avtori" placeholder="ავტორი" required></div>
+			  <div class="TR"><input type="text" name="dasaxeleba"placeholder="წიგნის დასახელება"></div>
+			  <div class="TR"><input type="text" name="weli" placeholder="გამოცემის წელი"></div>
+			  <div class="TR"><input type="text" name="gamomcemloba" placeholder="გამომცემლობა"></div>
+			  <div class="TR"><input type="text" name="fasi"  placeholder="ფასი"></div>
+			  <div class="TR"><input type="file"></div>
+			  <div class="TR"><input type="submit"></div>
+			</div>
+		  </form>
+		</article>
+	  </section>
+	  <footer>ყველა უფლება დაცულია &copy; 2022</footer>
+	</body>
+</html>
